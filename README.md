@@ -22,7 +22,7 @@ momento.
 2. `Archivo → Subir cuaderno` y elegir el notebook
 3. `Entorno de ejecución → Ejecutar todo`
 
-La primera celda monta Google Drive y crea la carpeta `MyDrive/food_delivery`, que es donde los
+La primera celda monta Google Drive y crea la carpeta `MyDrive/food_delivery_time_prediction`, que es donde los
 notebooks intercambian resultados y guardan los gráficos. Hay que autorizar el acceso la primera
 vez.
 
@@ -30,7 +30,7 @@ Si el montaje falla o no se autoriza, la celda **corta con un error explícito**
 escribir en el disco temporal de Colab, que se borra al cerrar la sesión.
 
 Fuera de Colab los notebooks funcionan igual: si no detectan Colab, usan la carpeta local
-`./food_delivery` con la misma estructura.
+`./food_delivery_time_prediction` con la misma estructura.
 
 ## Datos
 
@@ -58,17 +58,17 @@ los resultados son reproducibles entre corridas.
 
 ## Archivos que se generan
 
-En `MyDrive/food_delivery/`:
+En `MyDrive/food_delivery_time_prediction/`:
 
 ```
-food_delivery/
+food_delivery_time_prediction/
 ├── X_train.csv                    particiones de entrenamiento (notebook 02)
 ├── X_test.csv                     particiones de prueba (notebook 02)
 ├── y_train.csv                    variable objetivo de entrenamiento
 ├── y_test.csv                     variable objetivo de prueba
 ├── modelos_y_metricas.joblib      los cinco modelos entrenados (notebook 04)
 ├── tabla_metricas.csv             MSE, RMSE, MAE y R2 de train y test (notebook 04)
-└── splits/                        los seis gráficos en PNG a 150 dpi
+└── splits/                        los siete gráficos en PNG a 150 dpi
 ```
 
 ## Gráficos
@@ -84,7 +84,7 @@ como prefijo el notebook que los produce:
 | `03_distribuciones.png` | 03 | Histograma del objetivo y diagramas de caja por tráfico y clima |
 | `04_comparacion_modelos.png` | 04 | R2 y RMSE de los cinco modelos en train y test |
 | `04_prediccion_vs_real.png` | 04 | Predicción contra valor observado |
-| `05_complejidad_y_sobreajuste.png` | 05 | Curvas de train y test frente al grado del polinomio |
+| `05_complejidad_y_sobreajuste.png` | 05 | Curvas de train y test frente a la complejidad del modelo |
 
 ## Modelos
 

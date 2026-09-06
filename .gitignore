@@ -1,7 +1,7 @@
 informe/
 presentacion/
 release/
-food_delivery/
+food_delivery_time_prediction/
 datos_intermedios/
 *.joblib
 *.csv
